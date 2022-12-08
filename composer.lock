@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed5fb8fa2bb0d8cd6d512d6df11515d7",
+    "content-hash": "aece601f39c38ec45e38df5924ed7ad2",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -4785,6 +4785,18 @@
                 "source": "https://github.com/wikimedia/composer-merge-plugin/tree/master"
             },
             "time": "2022-09-01T01:29:53+00:00"
+        },
+        {
+            "name": "wordpress-premium/advanced-custom-fields-pro",
+            "version": "5.9.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.whitespace.house/releases/wordpress-plugin/wordpress-premium/advanced-custom-fields-pro-5.9.6.zip"
+            },
+            "require": {
+                "composer/installers": "^1.5 || ^2.0"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "wpackagist-plugin/acf-extended",

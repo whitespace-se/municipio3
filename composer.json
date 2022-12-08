@@ -28,6 +28,10 @@
     },
     {
       "type": "composer",
+      "url": "https://composer.whitespace.house"
+    },
+    {
+      "type": "composer",
       "url": "https://packagist.org"
     },
     {
@@ -83,7 +87,8 @@
     "wpackagist-plugin/varnish-http-purge": "^4.1.1",
     "wpackagist-plugin/wp-nested-pages": "3.1.4",
     "helsingborg-stad/modularity-products": "dev-master",
-    "helsingborg-stad/modularity-interactive-img-map": "dev-3.0/develop"
+    "helsingborg-stad/modularity-interactive-img-map": "dev-3.0/develop",
+    "wordpress-premium/advanced-custom-fields-pro": "~5.9.0"
   },
   "extra": {
     "path": "/",
