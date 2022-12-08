@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aece601f39c38ec45e38df5924ed7ad2",
+    "content-hash": "ed1fc24adba59b4a7433c8577aacbdc8",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -948,7 +948,6 @@
                     "AcfExportManager\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -960,8 +959,8 @@
             ],
             "description": "ACF Export Manager is a extension that let's you automatically export specified your ACF fields on save.",
             "support": {
-                "issues": "https://github.com/helsingborg-stad/acf-export-manager/issues",
-                "source": "https://github.com/helsingborg-stad/acf-export-manager/tree/1.0.11"
+                "source": "https://github.com/helsingborg-stad/acf-export-manager/tree/1.0.11",
+                "issues": "https://github.com/helsingborg-stad/acf-export-manager/issues"
             },
             "time": "2018-05-29T07:52:24+00:00"
         },

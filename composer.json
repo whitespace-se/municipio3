@@ -27,6 +27,10 @@
       "url": "https://github.com/whitespace-se/broken-link-detector"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/helsingborg-stad/acf-export-manager.git"
+    },
+    {
       "type": "composer",
       "url": "https://composer.whitespace.house"
     },
@@ -42,6 +46,7 @@
   "require": {
     "php": ">=7.4",
     "composer/installers": "~1.0",
+    "helsingborg-stad/acf-export-manager": ">=1.0.0",
     "helsingborg-stad/active-directory-api-wp-integration": ">=2.0.0",
     "helsingborg-stad/algolia-index": "^1.7",
     "helsingborg-stad/algolia-index-modularity-addon": "^1.0",
