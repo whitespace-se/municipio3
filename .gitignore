@@ -8,3 +8,8 @@
 /wp/
 .DS_Store
 node_modules
+
+wp-content/themes/*
+!wp-content/themes
+!wp-content/themes/helsingborg
+wp-content/themes/helsingborg/node_modules
