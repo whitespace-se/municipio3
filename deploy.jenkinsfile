@@ -17,6 +17,14 @@ pipeline {
         }
       }
     }
+    stage('Modularity') {
+      steps {
+        nodejs('v14') {
+          sh "cd ./wp-content/plugins/modularity && yarn install"
+          sh "cd ./wp-content/plugins/modularity && npm run build"
+        }
+      }
+    }
     stage('Deploy') {
       steps {
         sshagent(credentials: ['ssh-key-build-whitespace-house']) {
