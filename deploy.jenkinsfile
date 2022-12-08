@@ -23,10 +23,6 @@ pipeline {
           sh "cd ./wp-content/plugins/modularity && yarn install"
           sh "cd ./wp-content/plugins/modularity && npm run build"
           sh "cd ./wp-content/plugins/modularity && composer install --ignore-platform-reqs --no-dev --no-interaction"
-          sh "cd ./wp-content/plugins/modularity-local-events && composer install --ignore-platform-reqs --no-dev --no-interaction"
-          sh "cd ./wp-content/plugins/modularity-products && composer install --ignore-platform-reqs --no-dev --no-interaction"
-          sh "cd ./wp-content/plugins/modularity-recommend && composer install --ignore-platform-reqs --no-dev --no-interaction"
-          sh "cd ./wp-content/plugins/modularity-timeline && composer install --ignore-platform-reqs --no-dev --no-interaction"
         }
       }
     }
