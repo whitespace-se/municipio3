@@ -4,12 +4,12 @@
   "description": "Deployment of the Municipio Platform.",
   "authors": [
     {
-        "name": "Sebastian Thulin",
-        "email": "sebastian.thulin@helsingborg.se"
+      "name": "Sebastian Thulin",
+      "email": "sebastian.thulin@helsingborg.se"
     },
     {
-        "name": "Joel Bernerman",
-        "email": "joel.bernerman@helsingborg.se"
+      "name": "Joel Bernerman",
+      "email": "joel.bernerman@helsingborg.se"
     }
   ],
   "config": {
@@ -20,19 +20,19 @@
       "wikimedia/composer-merge-plugin": true
     }
   },
-  "minimum-stability" : "dev",
+  "minimum-stability": "dev",
   "repositories": [
     {
       "type": "vcs",
       "url": "https://github.com/whitespace-se/broken-link-detector"
     },
     {
-        "type":"composer",
-        "url":"https://packagist.org"
+      "type": "composer",
+      "url": "https://packagist.org"
     },
     {
-        "type":"composer",
-        "url":"https://wpackagist.org"
+      "type": "composer",
+      "url": "https://wpackagist.org"
     }
   ],
   "require": {
@@ -86,29 +86,35 @@
     "helsingborg-stad/modularity-interactive-img-map": "dev-3.0/develop"
   },
   "extra": {
-      "path": "/",
-      "wordpress-install-dir": "wp",
-      "installer-paths": {
-        "wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"],
-        "wp-content/plugins/{$name}": ["type:wordpress-plugin"],
-        "wp-content/themes/{$name}": ["type:wordpress-theme"]
-      },
-      "merge-plugin": {
-        "include": [
-            "composer.local.json"
-        ],
-        "recurse": true,
-        "replace": false,
-        "ignore-duplicates": false,
-        "merge-dev": true,
-        "merge-extra": false,
-        "merge-extra-deep": false,
-        "merge-scripts": false
+    "path": "/",
+    "wordpress-install-dir": "wp",
+    "installer-paths": {
+      "wp-content/mu-plugins/{$name}": [
+        "type:wordpress-muplugin"
+      ],
+      "wp-content/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
+    },
+    "merge-plugin": {
+      "include": [
+        "composer.local.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
     }
   },
   "scripts": {
     "post-install-cmd": [
-        "mkdir -p wp-content/uploads/cache/blade-cache"
+      "mkdir -p wp-content/uploads/cache/blade-cache"
     ]
   }
 }

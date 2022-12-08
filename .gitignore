@@ -7,4 +7,4 @@
 /vendor/
 /wp/
 .DS_Store
-composer.lock
+node_modules
