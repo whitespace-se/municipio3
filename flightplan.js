@@ -8,8 +8,6 @@ let config = {
   dumpFolder: "~/dumps",
   themes: [],
   shared: {
-    ".env": true,
-    languages: `wp-content/languages`,
   },
   filesAndFolders: [
     // Additional files to transfer
