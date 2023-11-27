@@ -13,5 +13,19 @@
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 
-// Activate debug mode
-define('WP_DEBUG', true);
+// Activate debug mode on all environments using ?debug flag. 
+if (isset($_GET['debug'])) {
+  define('WP_DEBUG', true);
+}
+
+if (!defined('WP_SITEURL')) {
+  define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp');
+}
+
+if (!defined('WP_HOME')) {
+  define('WP_HOME', WP_SITEURL);
+}
+
+// if (!defined('WP_CONTENT_URL')) {
+//   define('WP_CONTENT_URL', WP_SITEURL . '/wp-content');
+// }
