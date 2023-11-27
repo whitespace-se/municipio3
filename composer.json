@@ -4,12 +4,12 @@
   "description": "Deployment of the Municipio Platform.",
   "authors": [
     {
-        "name": "Sebastian Thulin",
-        "email": "sebastian.thulin@helsingborg.se"
+      "name": "Sebastian Thulin",
+      "email": "sebastian.thulin@helsingborg.se"
     },
     {
-        "name": "Joel Bernerman",
-        "email": "joel.bernerman@helsingborg.se"
+      "name": "Joel Bernerman",
+      "email": "joel.bernerman@helsingborg.se"
     }
   ],
   "config": {
@@ -21,15 +21,27 @@
       "php-http/discovery": true
     }
   },
-  "minimum-stability" : "dev",
+  "minimum-stability": "dev",
   "repositories": [
     {
-        "type":"composer",
-        "url":"https://packagist.org"
+      "type": "vcs",
+      "url": "https://github.com/whitespace-se/broken-link-detector"
     },
     {
-        "type":"composer",
-        "url":"https://wpackagist.org"
+      "type": "vcs",
+      "url": "https://github.com/helsingborg-stad/acf-export-manager.git"
+    },
+    {
+      "type": "composer",
+      "url": "https://composer.whitespace.house"
+    },
+    {
+      "type": "composer",
+      "url": "https://packagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
     }
   ],
   "require": {

@@ -1,0 +1,36 @@
+# Package files
+composer.lock
+package-lock.json
+
+/wp-content/*
+
+# MU Plugins
+!/wp-content/mu-plugins
+/wp-content/mu-plugins/*/*
+!/wp-content/mu-plugins/languages/*
+!/wp-content/mu-plugins/src/*
+
+# Plugins
+!/wp-content/plugins
+/wp-content/plugins/*
+
+# Themes
+!/wp-content/themes
+/wp-content/themes/municipio
+# /wp-content/themes/*
+# !/wp-content/themes/mytheme
+
+# Uploads
+/wp-content/uploads/*
+
+# Vendor directories
+/vendor
+/wp
+
+# Generated files
+dist
+tmp
+*.min.*
+*.min-*
+acf-fields
+CHANGELOG.md

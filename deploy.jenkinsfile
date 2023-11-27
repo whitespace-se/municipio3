@@ -1,0 +1,48 @@
+#!/usr/bin/env groovy
+
+pipeline {
+  agent any
+  environment {
+    FLIGHTPLAN_HOST = "${env.JOB_NAME}"
+    FLIGHTPLAN_DIR = "/srv/www/${env.JOB_NAME}"
+    FLIGHTPLAN_DOMAIN = "https://${env.JOB_NAME}"
+    FLIGHTPLAN_TARGET_DIR = "${env.JOB_NAME}"
+    FLIGHTPLAN_USER = "web"
+  }
+  stages {
+    stage('Build') {
+      steps {
+        nodejs('v14') {
+          sh "yarn install"
+        }
+      }
+    }
+    stage('Modularity') {
+      steps {
+        nodejs('v14') {
+          sh "cd ./wp-content/plugins/modularity && yarn install"
+          sh "cd ./wp-content/plugins/modularity && npm run build"
+          sh "cd ./wp-content/plugins/modularity && composer install --ignore-platform-reqs --no-dev --no-interaction"
+        }
+      }
+    }
+    stage('Municipio') {
+      steps {
+        nodejs('v14') {
+          sh "cd ./wp-content/themes/municipio && npm install https://github.com/helsingborg-stad/styleguide/archive/refs/tags/0.11.630.tar.gz --save-dev"
+          sh "cd ./wp-content/themes/municipio && npm install"
+          sh "cd ./wp-content/themes/municipio && npm run build"
+        }
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sshagent(credentials: ['ssh-key-build-whitespace-house']) {
+          nodejs('v14') {
+            sh "fly deploy:jenkins"
+          }
+        }
+      }
+    }
+  }
+}

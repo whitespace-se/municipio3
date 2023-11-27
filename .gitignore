@@ -10,6 +10,7 @@
 /vendor/
 /wp/
 .DS_Store
+
 composer.lock
 auth.json
 
@@ -17,3 +18,11 @@ auth.json
 .htaccess
 .devcontainer/.env
 !/.devcontainer/config/.htaccess
+
+node_modules
+
+wp-content/themes/*
+!wp-content/themes
+!wp-content/themes/helsingborg
+wp-content/themes/helsingborg/node_modules
+
