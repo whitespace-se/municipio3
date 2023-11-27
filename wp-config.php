@@ -28,6 +28,15 @@ require_once __DIR__ . '/config/upload.php';
 require_once __DIR__ . '/config/cron.php';
 
 /**
+ * Active directory configuration
+ *
+ * Configuration for the active directory login functionality
+ */
+if (file_exists(__DIR__ . '/config/ad.php')) {
+    require_once __DIR__ . '/config/ad.php';
+}
+
+/**
  * Search concfiguration
  *
  * Configuration for the search functionality
@@ -100,6 +109,9 @@ if (file_exists(__DIR__ . '/config/developer.php')) {
 if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__FILE__) . '/');
 }
+
+/** Force the use of sunrise.php */
+define('SUNRISE', true);
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

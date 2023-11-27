@@ -24,6 +24,11 @@ This repository simplifies the deployment for users of Municpio. Simply fork thi
 
 This will enshure that deployments can be made by fetching the upstream of the forked repository without any technical knowledge. Guide on hot to fetch a upstream repo with github user interface can be found here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork.
 
+## Changelog
+| Date       | Version | Release Notes                                                |
+|------------|---------|-------------------------------------------------------------|
+| 2023-06-14 | 3.2.0   | [Release Notes](https://github.com/example/repository/releases/tag/3.2.0) |
+
 ## Quick start
 1. Fork this repository. Enable github workflows on your newly created repository (gihub disables them due to security reasons on forks).
 2. Setup deployment details according to the tables below (source:  https://github.com/helsingborg-stad/municipio-deploy/tree/master/3.0).
@@ -31,10 +36,8 @@ This will enshure that deployments can be made by fetching the upstream of the f
 
 ## Adding custom dependencies
 You may add your own dependencies in composer.local.json file. This file is automatically read in build. We have made it a separate file to avoid merge conflicts.
-## Multiple forks of the same repository
-GitHub has a limitation to one fork of the same repository. This is a inconvenience in this use case but can be solved by a workaround. You may want to use this when you have multiple sites to deploy in the same github organization. 
 
-https://handong1587.github.io/linux_study/2015/12/18/create-multi-forks.html 
+You may also add plugins locally to your server with the folder name of the plugin prefixed with "local_". Normally they would be removed during the deploy to enshure one source of truth, however the deploy script will respect the "local_" string and keep them. 
 
 ## Parameters
 Add the following secrets to your github repository secrets section (https://docs.github.com/en/actions/security-guides/encrypted-secrets). We do recommend that you assign these secrets locally to your repository. You can however use organization level secret to everything except the path if you determine that they will persist. 
@@ -80,8 +83,8 @@ You may contribute to this repository if you feel that anything is missing. Simp
 ## Suggested target environment
 We do suggest that you include the following softare on the target machine.
 
-- NGINX
-- PHP 7.4 or later
+- NGINX / Litespeed / Apache
+- PHP 7.4 (PHP 8 support planned 2023)
 - Redis
 - Rsync (required for deployment)
 
